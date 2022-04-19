@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+/* Normalize */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+}
+
+a,
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+/* style head */
+
+.navbar{
+    max-width: 1080px;
+    height: 15vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-menu{
+    
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+/* style main */
+
+main{
+    max-width: 2000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-img{
+    height: 60vh;
+    margin-bottom: 2.5rem;
+}
+
+
+.box-content{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10rem;
+
+    justify-content: center;
+
+    margin-bottom: 2.5rem;
+}
+
+.content-item{
+    height: 30rem;
+    width: 40rem;
+
+    border: white 5px solid;
+
+    text-align: center;
+}
+
+.content-item__description{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+/* style footer */
+
+.footerBody{
+    max-width: 1080px;
+    margin: 0 auto;
+
+    height: 5vh;
+
+    display: flex;
+    justify-content: space-between;
+}
