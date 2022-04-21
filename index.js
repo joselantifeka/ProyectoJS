@@ -8,7 +8,7 @@ const AgregarAlCarrito = (articulo, precio) => {
 }
 
 
-while(1) {
+while(false) {
 
     let pregunta = prompt("Quieres comprar algun articulo ? \n Si/no");
 
