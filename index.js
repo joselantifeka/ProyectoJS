@@ -38,7 +38,7 @@ while (1) {
 
             alert(`Tus productos agregados al carrito son: \n${mostrar} \nTotal: ${total}$`)
 
-            pregunta = prompt("Deseas eliminar algun articulo?")
+            pregunta = prompt("Deseas eliminar algun articulo? \nsi/no")
             if (pregunta == "si" || pregunta == "SI" || pregunta == "Si") {
 
                 pregunta = parseInt(prompt(`Selecciona el numero de lista del articulo que quieras eliminar: \n${mostrar} \nTotal: ${total}$`))
