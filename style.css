@@ -102,25 +102,68 @@ main {
 /* Img catalogo */
 
 
-.imagen {
-    background: url(./assets/img/gorras/NY.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    .imagen {
+        background: url(./assets/img/gorras/NY.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-    transition: all .1s ease-out;
+        transition: all .1s ease-out;
 
-    max-width: 40rem;
-    min-width: 20rem;
-    height: 90%;
-}
+        max-width: 40rem;
+        min-width: 20rem;
+        height: 90%;
+    }
 
-.imagen:hover {
-    background: url(./assets/img/gorras/NY2.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    .imagen:hover {
+        background: url(./assets/img/gorras/NY2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    .imagen2 {
+        background: url(./assets/img/gorras/B.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: all .1s ease-out;
+
+        max-width: 40rem;
+        min-width: 20rem;
+        height: 90%;
+    }
+
+    .imagen2:hover {
+        background: url(./assets/img/gorras/B2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .imagen3 {
+        background: url(./assets/img/gorras/S.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: all .1s ease-out;
+
+        max-width: 40rem;
+        min-width: 20rem;
+        height: 90%;
+    }
+
+    .imagen3:hover {
+        background: url(./assets/img/gorras/S2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
 
 /* description img */
 

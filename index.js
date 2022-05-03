@@ -1,4 +1,4 @@
-class AgregarAlCarrito {
+class carrito {
 
     constructor(articulo, precio) {
         this.articulo = articulo;
@@ -6,56 +6,61 @@ class AgregarAlCarrito {
     }
 }
 
+function totalAndArticule() {
+    mostrar = "";
+    total = 0;
+
+    for (let i = 0; i < carro.length; i++) {
+        mostrar += `${i + 1}. ${carro[i].articulo}: ${carro[i].precio}$\n`;
+        total += carro[i].precio;
+    }
+}
+
+function filtrarBusqueda(arr,name){
+    let filtracion = arr.find((el) => el.nombre.includes(name));
+    return filtracion
+}
+
+function sacarDelCarrito(numero){
+    numero--;
+    carro.splice(numero, numero);
+}
+
 let total = 0;
 
-let mostrar = "";
+let mostrar;
 
-let carrito = [];
+let carro = [];
+
+let articulos = [];
 
 while (1) {
-
     let pregunta = prompt("Deseas comprar algun articulo? \n si/no")
 
     if (pregunta == "si" || pregunta == "SI" || pregunta == "Si") {
-
         let articulo = prompt("Ingresa el nombre del articulo");
-
         let precio = parseInt(prompt("ingresa el precio del articulo"));
 
         if (!precio) {
             alert("ingresa un precio valido!")
 
         } else {
-            carrito.push(new AgregarAlCarrito(articulo, precio));
+            carro.push(new carrito(articulo, precio));
+            totalAndArticule();
 
-            mostrar = "";
-            total = 0;
-
-            for (let i = 0; i < carrito.length; i++) {
-                mostrar += `${i + 1}. ${carrito[i].articulo}: ${carrito[i].precio}$\n`;
-                total += carrito[i].precio;
-            }
-
-            alert(`Tus productos agregados al carrito son: \n${mostrar} \nTotal: ${total}$`)
+            alert(`Tus productos agregados al carro son: \n${mostrar} \nTotal: ${total}$`)
 
             pregunta = prompt("Deseas eliminar algun articulo? \nsi/no")
+            
             if (pregunta == "si" || pregunta == "SI" || pregunta == "Si") {
+                pregunta = parseInt(prompt(`Selecciona el numero de lista del articulo que quieras eliminar: \n${mostrar} \nTotal: ${total}$`));
 
-                pregunta = parseInt(prompt(`Selecciona el numero de lista del articulo que quieras eliminar: \n${mostrar} \nTotal: ${total}$`))
-                if(pregunta < carrito.length){
-
-                    pregunta--;
-                    carrito.splice(pregunta,pregunta);
-
-                    mostrar = "";
-                    total = 0;
-                    for (let i = 0; i < carrito.length; i++) {
-                        mostrar += `${i + 1}. ${carrito[i].articulo}: ${carrito[i].precio}$\n`;
-                        total += carrito[i].precio;
-                    }
-
-                    alert(`Tus productos agregados al carrito son: \n${mostrar}\nTotal :${total}$`)
-                } else{
+                if (pregunta <= carro.length) {
+                    sacarDelCarrito(pregunta)   
+                    totalAndArticule();
+                    
+                    alert(`Tus productos agregados al carro son: \n${mostrar}\nTotal :${total}$`)
+                } else {
                     alert("ingresaste un dato invalido!")
                 }
             }
