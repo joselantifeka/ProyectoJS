@@ -26,6 +26,13 @@ function sacarDelCarrito(numero){
     carro.splice(numero, numero);
 }
 
+let usuario = prompt("ingresa tu nombre!");
+
+    if(usuario == null || usuario == ""){
+        document.getElementById('domm').innerHTML = `Bienvenido!`
+    }else{
+        document.getElementById('domm').innerHTML = `Hola ${usuario}!`
+    }
 let total = 0;
 
 let mostrar;
