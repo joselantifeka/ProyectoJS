@@ -1,3 +1,7 @@
+
+"ESTE ARCHIVO SOLO TIENE LA LOGICA"
+
+/*
 class carrito {
 
     constructor(articulo, precio) {
@@ -77,3 +81,5 @@ while (1) {
         break;
     }
 }
+
+*/
