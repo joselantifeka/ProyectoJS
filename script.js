@@ -50,10 +50,9 @@ function total(){
     for(i = 0; i < carro.lista.length; i++){
     total += carro.lista[i].precio;
     }
-    console.log(total)
   
     let nuevo = document.getElementById('total');
-    nuevo.innerText = total
+    nuevo.innerText = total + "$";
 }
 
 
