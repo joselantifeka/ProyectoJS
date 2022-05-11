@@ -55,7 +55,7 @@
     
 
     .carrito{
-        overflow: scroll;
+        overflow-y: scroll;
 
         width: 25vw;
         height: 100vh;
@@ -94,7 +94,7 @@
     /* boton flotante */
     .deleteA{
         position: absolute;
-        bottom: 12px;
+        bottom: 30px;
         left: 15px;
 
         transition: all .3s ease;

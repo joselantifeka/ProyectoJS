@@ -1,4 +1,5 @@
 
+// Este es el primer Algoritmo creado
 
  //Clase carrito   
 class Carrito {
