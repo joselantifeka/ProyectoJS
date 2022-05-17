@@ -21,7 +21,6 @@ function functionAgregar(numero) {
         }
     }
 }
-
 function total() {
     let total = 0;
     for (let i = 0; i < carro.lista.length; i++) {
@@ -29,10 +28,8 @@ function total() {
     }
     let nuevo = getID('total');
     nuevo.innerText = total + "$";
-
     sessionStorage.setItem("carro",JSON.stringify(carro.lista));
 }
-
 function mostrarCarrito() {
     almacen.innerHTML = null;
     for (let i = 0; i < carro.lista.length; i++) {
@@ -42,16 +39,12 @@ function mostrarCarrito() {
     total();
 }
 
-
-
 // variables
 let carro = new Carrito();
 let almacen = getID('articulos');
 let catalogo = getID('catalogo');
 
-
 //evento click agregar
-
 for (let i = 0; i < articulos.length; i++) {
     catalogo.innerHTML += `<div class="content-item" data-aos="fade-up"
     data-aos-anchor-placement="center-bottom">
@@ -63,17 +56,13 @@ for (let i = 0; i < articulos.length; i++) {
         </div>
     </div>`
 }
-
 catalogo.addEventListener('click', (e) => {
     if (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") {
         functionAgregar(e.target.id);
     }
 })
 
-
-
 // evento eliminar 
-
 almacen.addEventListener('click', (e) => {
     if (e.target && e.target.tagName === "I") {
         let numero = e.target.id;
@@ -85,9 +74,7 @@ almacen.addEventListener('click', (e) => {
     }
 })
 
-
 // sessionStorage
-
 if(!!sessionStorage.getItem("carro")){
     let guardado = JSON.parse(sessionStorage.getItem("carro"));
     if(guardado.length > 0){

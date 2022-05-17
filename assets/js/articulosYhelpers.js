@@ -24,7 +24,6 @@ let articulos = [
 function getID(id){
     return document.getElementById(id)
 }
-
 function getClass(id){
     return document.getElementsByClassName(id)
 }
