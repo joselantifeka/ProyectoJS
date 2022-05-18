@@ -16,15 +16,13 @@ class Carrito {
 //funciones click agregar  
 function functionAgregar(numero) {
     for(let i = 0; i < articulos.length; i++){
-        if(numero === `A${articulos[i].id}`){
-            carro.agregar(articulos[i])
-        }
+        (numero === `A${articulos[i].id}`) && carro.agregar(articulos[i]);
     }
 }
 function total() {
     let total = 0;
-    for (let i = 0; i < carro.lista.length; i++) {
-        total += carro.lista[i].precio;
+    for (const produ of carro.lista) {
+        total += produ.precio;
     }
     let nuevo = getID('total');
     nuevo.innerText = total + "$";
@@ -57,19 +55,15 @@ for (let i = 0; i < articulos.length; i++) {
     </div>`
 }
 catalogo.addEventListener('click', (e) => {
-    if (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") {
-        functionAgregar(e.target.id);
-    }
+    (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") && functionAgregar(e.target.id);
 })
 
 // evento eliminar 
 almacen.addEventListener('click', (e) => {
-    if (e.target && e.target.tagName === "I") {
+    if(e.target && e.target.tagName === "I") {
         let numero = e.target.id;
         for (let i = 0; i < carro.lista.length; i++) {
-            if (numero === `deleteA-${i}`) {
-                carro.eliminar(i);
-            }
+            (numero === `deleteA-${i}`) && carro.eliminar(i);
         }
     }
 })

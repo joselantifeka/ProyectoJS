@@ -1,18 +1,22 @@
-//evento click despliegue carrito
-function clickCarrito(){
-    if(carritoButton.children[0].className == 'fa-solid fa-cart-shopping'){
-        let barrita = getID('allCarrito');
+// funciones
+function despliegue(){
         barrita.className = "carrito op";
         carritoButton.children[0].className = 'fa-solid fa-x';
         carritoButton.className = 'button-float button-float-asaide'
-    } else{
-        let barrita = getID('allCarrito');
+}
+function esconderD(){
         barrita.className = "carrito";
         carritoButton.children[0].className = 'fa-solid fa-cart-shopping';
         carritoButton.className = 'button-float'
-    } 
 }
 
-//var click click despliegue carrito
-let carritoButton = getID('allCarritoButton');
+//evento click despliegue carrito
+function clickCarrito(){
+    (carritoButton.children[0].className == 'fa-solid fa-cart-shopping') ? despliegue() : esconderD();
+}
+
+//variables
+let barrita = getID('allCarrito');
+let carritoButton = getID('allCarritoButton'); 
+ /*evento click despliegue */
     carritoButton.onclick = () => clickCarrito();
