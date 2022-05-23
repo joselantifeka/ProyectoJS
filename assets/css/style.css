@@ -28,6 +28,20 @@
         color: white;
     }
 
+    body::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+      }
+      
+      body::-webkit-scrollbar-track {
+        background: transparent;        /* color of the tracking area */
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: rgb(240, 240, 240);    /* color of the scroll thumb */
+        border-radius: 50px;
+        border: solid black 4px;
+      }
+
     /* style head */
 
     .navbar {
@@ -142,6 +156,16 @@
     .articulos {
         transition: all .5s ease;
         overflow-y: scroll;
+    }
+    .articulos::-webkit-scrollbar{
+        background-color: white;
+        border-radius: 50px;
+        width: 5px;
+    }
+    .articulos::-webkit-scrollbar-thumb{
+        background-color: #636363;
+        border-radius: 50px;
+        height: 5px;
     }
 
     .asaide-titulo {
