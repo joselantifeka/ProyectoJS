@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/5229224c55.js" crossorigin="anonymous"></script>
     <!-- AOS animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- toastify-js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header id="header" data-aos="fade-down">
@@ -30,8 +32,11 @@
             <p class="asaide-titulo">Bolsa de articulos</p>
             <div class="articulos" id="articulos">
             </div>
-            <br>
-            <p id="total">0$</p>
+            <div class="footer-asaide">
+                <p>Numero de articulos:<span id="conteo">0</span></p>
+                <p>Total: <span id="total">0$</span></p>
+                <button class="pay">Ir a pagar</button>
+            </div>
         </div>
     </aside>
     <main>
@@ -102,12 +107,14 @@
             <p class=""><a href="#header">NewEre GA - inicio</a></p>
     </footer>
 
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- toastify-js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <!-- scirpt -->
 <script src="./assets/js/articulosYhelpers.js"></script>
 <script src="./assets/js/asaide.js"></script>
 <script src="./assets/js/carro.js"></script>
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script>
     AOS.init();
   </script>
