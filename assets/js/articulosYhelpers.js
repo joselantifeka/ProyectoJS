@@ -1,29 +1,31 @@
-let articulos = [
-    {
-    id: 0,
-    nombre: "New York Yankees",
-    precio: 35,
-    img1: "./assets/img/gorras/NY.png",
-    img2: "./assets/img/gorras/NY2.jpg"},
-    {
-    id: 1,
-    nombre: "Boston Sox SS",
-    precio: 37,
-    img1: "./assets/img/gorras/B.jpg",
-    img2: "./assets/img/gorras/B2.jpg"},
-    {
-    id: 2,
-    nombre: "Chicago White Sox",
-    precio: 34,
-    img1: "./assets/img/gorras/S.jpg",
-    img2: "./assets/img/gorras/S2.jpg"}
-    
-]
+let articulos = [];
+fetch('./assets/js/data.json')
+    .then((res) => res.json())
+    .then((data) => {
+        articulos = data;
+        articuloos();
+    })
 
 // Helpers
-function getID(id){
-    return document.getElementById(id)
+function getID(id) {
+    return document.getElementById(id);
 }
-function getClass(id){
+
+function getClass(id) {
     return document.getElementsByClassName(id)
+};
+
+// funcion mostrar articulos
+function articuloos() {
+    for (let i = 0; i < articulos.length; i++) {
+        catalogo.innerHTML += `<div class="content-item" data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom">
+        <div class="imagen${i + 1}"></div>
+        <div class="content-item__description">
+            <h3>${articulos[i].nombre} - 59Fifty Cerrada</h3>
+            <p>${articulos[i].precio}$</p>
+            <button id="A${articulos[i].id}"><p id="A${articulos[i].id}"><i class="fa-solid fa-cart-shopping menos"></i><i class="fa-solid fa-cart-plus mas" id="A${articulos[i].id}"></i></p></button>
+        </div>
+    </div>`
+    }
 }

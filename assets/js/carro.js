@@ -59,17 +59,7 @@ let almacen = getID('articulos');
 let catalogo = getID('catalogo');
 
 //evento click agregar
-for (let i = 0; i < articulos.length; i++) {
-    catalogo.innerHTML += `<div class="content-item" data-aos="fade-up"
-    data-aos-anchor-placement="center-bottom">
-        <div class="imagen${i + 1}"></div>
-        <div class="content-item__description">
-            <h3>${articulos[i].nombre} - 59Fifty Cerrada</h3>
-            <p>${articulos[i].precio}$</p>
-            <button id="A${articulos[i].id}"><p id="A${articulos[i].id}"><i class="fa-solid fa-cart-shopping menos"></i><i class="fa-solid fa-cart-plus mas" id="A${articulos[i].id}"></i></p></button>
-        </div>
-    </div>`
-}
+
 catalogo.addEventListener('click', (e) => {
     (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") && functionAgregar(e.target.id);
     if (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P"){
