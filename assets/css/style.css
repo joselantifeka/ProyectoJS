@@ -275,65 +275,14 @@
     /* Img catalogo */
 
 
-    .imagen1 {
-        background: url(../img/gorras/NY.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-
+    .imagen {
         transition: all .1s ease-out;
-
+        
         max-width: 40rem;
         min-width: 20rem;
+        max-height: 22.5rem;
+        margin: 10rem 0;
         height: 90%;
-    }
-
-    .imagen1:hover {
-        background: url(../img/gorras/NY2.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-
-    .imagen2 {
-        background: url(../img/gorras/B.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        transition: all .1s ease-out;
-
-        max-width: 40rem;
-        min-width: 20rem;
-        height: 90%;
-    }
-
-    .imagen2:hover {
-        background: url(../img/gorras/B2.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .imagen3 {
-        background: url(../img/gorras/S.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        transition: all .1s ease-out;
-
-        max-width: 40rem;
-        min-width: 20rem;
-        height: 90%;
-    }
-
-    .imagen3:hover {
-        background: url(../img/gorras/S2.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 
     .domm {

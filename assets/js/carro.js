@@ -18,7 +18,6 @@ function functionAgregar(numero) {
     for (let i = 0; i < articulos.length; i++) {
         (numero === `A${articulos[i].id}`) && carro.agregar(articulos[i]);
     }
-
 }
 
 function total() {
@@ -42,43 +41,11 @@ function mostrarCarrito() {
     total();
 }
 
-// funciones para toastify
-function hallar(id) {
-    let hallado = "";
-    for (let i = 0; i < articulos.length; i++) {
-        if (id === `A${i}`) {
-            hallado = articulos[i].nombre;
-        }
-    }
-    return hallado
-}
 
 // variables
 let carro = new Carrito();
 let almacen = getID('articulos');
-let catalogo = getID('catalogo');
 
-//evento click agregar
-
-catalogo.addEventListener('click', (e) => {
-    (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") && functionAgregar(e.target.id);
-    if (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P"){
-        Toastify({
-            text: `Se agrego ${hallar(e.target.id)}`,
-            duration: 3000,
-            newWindow: true,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "left", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-                background: "white",
-                color: "black"
-            },
-            onClick: () => despliegue() // Callback after click
-        }).showToast();
-    }
-})
 
 // evento eliminar 
 almacen.addEventListener('click', (e) => {
