@@ -4,20 +4,8 @@ class Carrito {
         this.lista = [];
     }
     agregar(item) {
-        if(this.lista.length != 0){
-            for(let i = 0; i < this.lista.length; i++){
-                if(item.id === this.lista[i].id ){
-                    this.lista[i].cantidad++;
-                    mostrarCarrito();
-                }else{
-                    this.lista.push(item);
-                    mostrarCarrito();
-                }
-            }
-        }else{
             this.lista.push(item);
             mostrarCarrito();
-        }
     }
     eliminar(numero) {
         this.lista.splice(numero, 1);
@@ -42,10 +30,7 @@ function total() {
     sessionStorage.setItem("carro", JSON.stringify(carro.lista));
     let nuevoc = getID('conteo')
     let contado = 0;
-    for(let i = 0; i < carro.lista.length; i++){
-        contado += carro.lista[i].cantidad
-    }
-    nuevoc.innerText = contado;
+    nuevoc.innerText = carro.lista.length;
 }
 
 function mostrarCarrito() {
