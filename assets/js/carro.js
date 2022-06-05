@@ -4,8 +4,20 @@ class Carrito {
         this.lista = [];
     }
     agregar(item) {
-        this.lista.push(item);
-        mostrarCarrito();
+        if(this.lista.length != 0){
+            for(let i = 0; i < this.lista.length; i++){
+                if(item.id === this.lista[i].id ){
+                    this.lista[i].cantidad++;
+                    mostrarCarrito();
+                }else{
+                    this.lista.push(item);
+                    mostrarCarrito();
+                }
+            }
+        }else{
+            this.lista.push(item);
+            mostrarCarrito();
+        }
     }
     eliminar(numero) {
         this.lista.splice(numero, 1);
@@ -13,7 +25,7 @@ class Carrito {
     }
 }
 
-//funciones click agregar  
+//funciones     
 function functionAgregar(numero) {
     for (let i = 0; i < articulos.length; i++) {
         (numero === `A${articulos[i].id}`) && carro.agregar(articulos[i]);
@@ -29,7 +41,11 @@ function total() {
     nuevot.innerText = total + "$";
     sessionStorage.setItem("carro", JSON.stringify(carro.lista));
     let nuevoc = getID('conteo')
-    nuevoc.innerText = carro.lista.length;
+    let contado = 0;
+    for(let i = 0; i < carro.lista.length; i++){
+        contado += carro.lista[i].cantidad
+    }
+    nuevoc.innerText = contado;
 }
 
 function mostrarCarrito() {
@@ -41,13 +57,11 @@ function mostrarCarrito() {
     total();
 }
 
-
 // variables
 let carro = new Carrito();
 let almacen = getID('articulos');
 
-
-// evento eliminar 
+// eventos
 almacen.addEventListener('click', (e) => {
     if (e.target && e.target.tagName === "I") {
         let numero = e.target.id;

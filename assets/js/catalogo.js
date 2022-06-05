@@ -7,7 +7,7 @@ function getClass(id) {
     return document.getElementsByClassName(id)
 };
 
-// funciones para toastify
+// funciones
 function hallar(id) {
     let hallado = "";
     for (let i = 0; i < articulos.length; i++) {
@@ -17,9 +17,7 @@ function hallar(id) {
     }
     return hallado
 }
-
-// funcion mostrar articulos
-function articuloos() {
+function mostrarArticulos() {
     for (let i = 0; i < articulos.length; i++) {
         catalogo.innerHTML += `<div class="content-item" data-aos="fade-up"
         data-aos-anchor-placement="center-bottom">
@@ -39,11 +37,11 @@ fetch('./assets/js/data.json')
     .then((res) => res.json())
     .then((data) => {
         articulos = data;
-        articuloos();
+        mostrarArticulos();
     });
 let catalogo = getID('catalogo');
 
-// evento mostrar catalogo
+// eventos
 
 catalogo.addEventListener('click', (e) => {
     (e.target && e.target.tagName === "I" || e.target && e.target.tagName === "BUTTON" || e.target && e.target.tagName === "P") && functionAgregar(e.target.id);

@@ -3,27 +3,31 @@
         "nombre": "New York Yankees",
         "precio": 35,
         "img1": "./assets/img/gorras/NY.png",
-        "img2": "./assets/img/gorras/NY2.jpg"
+        "img2": "./assets/img/gorras/NY2.jpg",
+        "cantidad": 1
     },
     {
         "id": 1,
         "nombre": "Boston Sox SS",
         "precio": 37,
         "img1": "./assets/img/gorras/B.jpg",
-        "img2": "./assets/img/gorras/B2.jpg"
+        "img2": "./assets/img/gorras/B2.jpg",
+        "cantidad": 1
     },
     {
         "id": 2,
         "nombre": "Chicago White Sox",
         "precio": 34,
         "img1": "./assets/img/gorras/S.jpg",
-        "img2": "./assets/img/gorras/S2.jpg"
+        "img2": "./assets/img/gorras/S2.jpg",
+        "cantidad": 1
     },
     {
         "id": 3,
         "nombre": " Los Angeles Dodgers Blue",
         "precio": 50,
         "img1": "./assets/img/gorras/L.jpg",
-        "img2": "./assets/img/gorras/L2.jpg"
+        "img2": "./assets/img/gorras/L2.jpg",
+        "cantidad": 1
     }
 ]

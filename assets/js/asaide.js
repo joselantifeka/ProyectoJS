@@ -10,7 +10,7 @@ function esconderD(){
         carritoButton.className = 'button-float'
 }
 
-//evento click despliegue carrito
+//eventos
 function clickCarrito(){
     (carritoButton.children[0].className == 'fa-solid fa-cart-shopping') ? despliegue() : esconderD();
 }
@@ -18,5 +18,5 @@ function clickCarrito(){
 //variables
 let barrita = getID('allCarrito');
 let carritoButton = getID('allCarritoButton'); 
- /*evento click despliegue */
+ /*click despliegue */
     carritoButton.onclick = () => clickCarrito();
